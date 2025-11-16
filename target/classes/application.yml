@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/doj?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:1234}
+    driver-class-name: ${DB_DRIVER:com.mysql.cj.jdbc.Driver}
+
+  jpa:
+    database-platform: ${DB_DIALECT:org.hibernate.dialect.MySQL8Dialect}
+    generate-ddl: true
+    show-sql: ${SHOW_SQL:true}
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: ${SERVER_PORT:7777}
+
+# Security configuration
+security:
+  jwt:
+    secret: ${JWT_SECRET:mySecretKeyThatIsLongEnoughForHS256Algorithm123456789}
+    expiration: ${JWT_EXPIRATION:10800000} # 3 hours in milliseconds
+
+# Gemini configuration
+gemini:
+  api:
+    key: AIzaSyA-uOb4Rc3klyE4SPZIpsXXj0xKa2_vQNg
+  chatModel: ${GEMINI_CHAT_MODEL:gemini-2.5-flash}
+  embedModel: ${GEMINI_EMBED_MODEL:embedding-001}
+
+# Indian Kanoon API configuration
+indiankanoon:
+  api:
+    key: ${INDIANKANOON_API_KEY:13c0888d0cb03bf0352b22528bfd9581277eb79c}
+    baseUrl: ${INDIANKANOON_API_BASE_URL:https://api.indiankanoon.org}
