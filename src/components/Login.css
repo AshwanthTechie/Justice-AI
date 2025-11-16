@@ -1,0 +1,91 @@
+/* Fullscreen background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #f2f3f6; /* light background (matches chat app) */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fullscreen login box */
+.login-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 0; /* No border radius so it looks like full screen section */
+  width: 100%;
+  max-width: 600px;
+  max-height: 100vh;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.login-box h2 {
+  margin-bottom: 30px;
+  color: #20232a; /* dark header (like your sidebar/nav) */
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Input fields */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+}
+
+.login-box input:focus {
+  border-color: #20232a;
+  box-shadow: 0 0 6px rgba(32, 35, 42, 0.4);
+  outline: none;
+}
+
+/* Login button */
+.login-box button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: #20232a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-box button[type="submit"]:hover {
+  background: #3c4048;
+  transform: scale(1.01);
+}
+
+/* Register link */
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+}
+
+.register-link button {
+  background: none;
+  border: none;
+  color: #20232a;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.register-link button:hover {
+  color: #3c4048;
+}

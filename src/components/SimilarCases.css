@@ -1,0 +1,156 @@
+.similar-cases-container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.similar-cases-title {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+}
+
+.similar-cases-placeholder {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 40px;
+  font-style: italic;
+}
+
+.loading, .error, .no-results {
+  text-align: center;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.loading {
+  background-color: #e8f4fd;
+  color: #2980b9;
+}
+
+.error {
+  background-color: #fdf2f2;
+  color: #e74c3c;
+}
+
+.no-results {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.cases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-item {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.case-item:hover {
+  border-color: #3498db;
+  background: #f8f9ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+}
+
+.case-title {
+  color: #2c3e50;
+  font-size: 0.95em;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.case-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+  font-size: 0.85em;
+}
+
+.case-court {
+  color: #8e44ad;
+  font-weight: 500;
+}
+
+.case-date {
+  color: #7f8c8d;
+}
+
+.case-snippet {
+  color: #5a6c7d;
+  font-size: 0.85em;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.pagination-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.pagination-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .similar-cases-container {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .case-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pagination-info {
+    order: -1;
+  }
+}

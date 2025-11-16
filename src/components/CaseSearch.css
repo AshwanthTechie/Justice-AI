@@ -1,0 +1,103 @@
+/* Case Search Results */
+.case-search-results {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.case-search-results h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #007acc;
+  font-weight: 600;
+}
+
+.case-result-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #3a3a3a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: 1px solid #444;
+}
+
+.case-result-item:hover {
+  background-color: #4a4a4a;
+  border-color: #007acc;
+}
+
+.case-result-item:last-child {
+  margin-bottom: 0;
+}
+
+.case-result-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.case-result-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.case-court {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.case-date {
+  color: #888;
+}
+
+.case-result-snippet {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Searching Cases */
+.searching-cases {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #888;
+  font-size: 14px;
+  border-bottom: 1px solid #444;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #444;
+  border-top: 2px solid #007acc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Case Search Error */
+.case-search-error {
+  padding: 10px;
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: 10px;
+  border: 1px solid #f44336;
+}
